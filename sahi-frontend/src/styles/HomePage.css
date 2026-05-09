@@ -1,0 +1,172 @@
+/* PAGE WRAPPER */
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 350px;
+  background: linear-gradient(to right, #111, #333);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.hero-content button {
+  padding: 10px 20px;
+  background: #00ffcc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* CATEGORIES */
+.categories h2 {
+  margin-bottom: 15px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.category-card {
+  background: #f4f4f4;
+  padding: 25px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category-card:hover {
+  background: #00ffcc;
+  color: black;
+}
+
+/* BANNERS */
+.banner-section {
+  display: flex;
+  gap: 20px;
+}
+
+.banner {
+  flex: 1;
+  background: #222;
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.banner.secondary {
+  background: #444;
+}
+
+/* PRODUCTS SECTION */
+
+.products-section {
+
+  padding: 40px 5%;
+}
+
+
+.products-section h2 {
+
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+
+
+/* GRID */
+
+.products-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(260px, 1fr)
+    );
+
+  gap: 30px;
+
+  align-items: stretch;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .products-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .hero {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner-section {
+    flex-direction: column;
+  }
+
+  .products-section {
+  margin-top: 30px;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+}
+.search-section{
+  display:flex;
+  justify-content:center;
+  margin:40px 0;
+}
+
+.search-section input{
+  width:60%;
+  max-width:500px;
+  padding:14px 20px;
+  border:none;
+  outline:none;
+  border-radius:12px;
+  font-size:16px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}

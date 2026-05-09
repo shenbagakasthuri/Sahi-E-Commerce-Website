@@ -1,0 +1,189 @@
+/* Google Font feel */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Full page */
+.login-page {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8fafc,
+      #eef2ff,
+      #fdf2f8
+    );
+}
+
+
+/* Card */
+.login-page form {
+  width: 100%;
+  max-width: 430px;
+
+  background: white;
+
+  padding: 45px 35px;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.08);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  animation: fadeIn .4s ease;
+}
+
+
+/* Heading */
+.login-page h2 {
+  text-align: center;
+
+  margin-bottom: 28px;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #111827;
+
+  letter-spacing: .5px;
+}
+
+
+/* Inputs */
+.login-page input {
+  width: 100%;
+
+  padding: 15px 18px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: .3s;
+}
+
+
+/* Placeholder */
+.login-page input::placeholder {
+  color: #9ca3af;
+}
+
+
+/* Focus */
+.login-page input:focus {
+  border-color: #111827;
+
+  box-shadow:
+    0 0 0 4px rgba(17,24,39,.08);
+}
+
+
+/* Button */
+.login-page button {
+  margin-top: 10px;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #111827;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+
+/* Hover */
+.login-page button:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
+
+/* Disabled */
+.login-page button:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+
+/* Small text */
+.auth-footer {
+  text-align: center;
+
+  margin-top: 20px;
+
+  font-size: 14px;
+
+  color: #6b7280;
+}
+
+
+.auth-footer a {
+  text-decoration: none;
+
+  color: #111827;
+
+  font-weight: 600;
+}
+
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+
+  .login-page form {
+    padding: 35px 22px;
+  }
+
+  .login-page h2 {
+    font-size: 24px;
+  }
+
+}
