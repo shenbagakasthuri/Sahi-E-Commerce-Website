@@ -1,125 +1,302 @@
-/* Navbar Container */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 30px;
-  background: #111;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar{
+
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:18px 5%;
+
+  background:rgba(17,24,39,.92);
+
+  backdrop-filter:blur(12px);
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
 }
 
-/* Logo */
-.logo a {
-  font-size: 22px;
-  font-weight: bold;
-  color: #00ffcc;
-  text-decoration: none;
+
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo{
+
+  text-decoration:none;
+
+  font-size:30px;
+
+  font-weight:800;
+
+  letter-spacing:2px;
+
+  color:#00ffcc;
+
+  transition:.3s;
 }
 
-/* Search Bar */
-.search-bar {
-  display: flex;
-  align-items: center;
-  background: #222;
-  padding: 6px 12px;
-  border-radius: 8px;
-  width: 300px;
+
+.logo:hover{
+
+  transform:scale(1.05);
 }
 
-.search-bar input {
-  flex: 1;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: white;
+
+
+/* ==========================
+   NAV LINKS
+========================== */
+
+.nav-links{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:35px;
 }
 
-.search-icon {
-  color: #aaa;
+
+.nav-links a{
+
+  position:relative;
+
+  text-decoration:none;
+
+  color:white;
+
+  font-weight:500;
+
+  font-size:16px;
+
+  transition:.3s;
 }
 
-/* Nav Links */
-.nav-links {
-  display: flex;
-  gap: 20px;
+
+
+/* Hover underline */
+
+.nav-links a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-6px;
+
+  width:0%;
+  height:2px;
+
+  background:#00ffcc;
+
+  transition:.3s;
 }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
+
+.nav-links a:hover{
+
+  color:#00ffcc;
 }
 
-.nav-links a:hover {
-  color: #00ffcc;
+
+.nav-links a:hover::after{
+
+  width:100%;
 }
 
-/* Icons */
-.nav-icons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 20px;
+
+
+/* React router active */
+
+.nav-links a.active{
+
+  color:#00ffcc;
 }
 
-.nav-icons a {
-  color: white;
+
+
+/* ==========================
+   ICONS
+========================== */
+
+.nav-icons{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:20px;
 }
 
-/* Mobile Menu Icon */
-.menu-icon {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
+
+.nav-icons a,
+.logout-btn,
+.menu-icon{
+
+  width:42px;
+  height:42px;
+
+  border:none;
+  outline:none;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:#1f2937;
+
+  color:white;
+
+  font-size:20px;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+  text-decoration:none;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
 
-  .search-bar {
-    display: none;
+.nav-icons a:hover,
+.logout-btn:hover,
+.menu-icon:hover{
+
+  background:#00ffcc;
+
+  color:black;
+
+  transform:translateY(-3px);
+}
+
+
+
+/* ==========================
+   BADGE
+========================== */
+
+.icon-wrapper{
+
+  position:relative;
+}
+
+
+.badge{
+
+  position:absolute;
+
+  top:-6px;
+  right:-6px;
+
+  width:20px;
+  height:20px;
+
+  border-radius:50%;
+
+  background:#ef4444;
+
+  color:white;
+
+  font-size:11px;
+
+  font-weight:700;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:2px solid #111827;
+}
+
+
+
+/* ==========================
+   MOBILE MENU BUTTON
+========================== */
+
+.menu-icon{
+
+  display:none;
+}
+
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+  .navbar{
+
+    padding:15px 20px;
   }
 
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #111;
-    flex-direction: column;
-    width: 200px;
-    padding: 20px;
-    display: none;
+
+  .logo{
+
+    font-size:24px;
   }
 
-  .nav-links.active {
-    display: flex;
+
+  .menu-icon{
+
+    display:flex;
   }
 
-  .menu-icon {
-    display: block;
+
+  .nav-links{
+
+    position:absolute;
+
+    top:80px;
+    right:20px;
+
+    width:220px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:rgba(17,24,39,.97);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+      0 10px 30px rgba(0,0,0,.2);
+
+    flex-direction:column;
+
+    gap:20px;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:
+      translateY(-20px);
+
+    transition:.3s;
   }
-}
 
-.icon-wrapper {
-  position: relative;
-  display: inline-block;
-  margin: 0 10px;
-}
 
-.badge {
-  position: absolute;
-  top: -8px;
-  right: -10px;
-  background: red;
-  color: white;
-  font-size: 12px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .nav-links.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+      translateY(0);
+  }
+
 }

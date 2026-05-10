@@ -2,40 +2,58 @@ import "../styles/CheckoutPage.css";
 
 import { useState } from "react";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate }
+  from "react-router-dom";
 
-import { useCart } from "../hooks/useCart";
+import {
+  FiMapPin,
+  FiCreditCard,
+  FiPackage,
+  FiArrowLeft
+} from "react-icons/fi";
 
-import { useOrders } from "../hooks/useOrders";
+import { useCart }
+  from "../hooks/useCart";
 
-import { useToast } from "../context/ToastContext";
+import { useOrders }
+  from "../hooks/useOrders";
+
+import { useToast }
+  from "../context/ToastContext";
+
 
 function CheckoutPage() {
 
   const navigate =
     useNavigate();
 
+
   const {
-    cartItems,
+    cartItems = [],
     clearCart
   } = useCart();
+
 
   const {
     createOrder
   } = useOrders();
+
 
   const {
     showToast
   } = useToast();
 
 
+
   const [address,
     setAddress] =
       useState("");
 
+
   const [payment,
     setPayment] =
       useState("COD");
+
 
 
   const totalPrice =
@@ -46,12 +64,14 @@ function CheckoutPage() {
         total +
 
         (
-          item.price *
-          (item.quantity || 1)
+          item?.price *
+
+          (item?.quantity || 1)
         ),
 
       0
     );
+
 
 
 
@@ -88,6 +108,7 @@ function CheckoutPage() {
 
 
 
+
   if (
     cartItems.length === 0
   ) {
@@ -96,21 +117,32 @@ function CheckoutPage() {
 
       <div className="checkout-empty">
 
+        <FiPackage />
+
         <h2>
-          Your cart is empty 🛒
+          Your cart is empty
         </h2>
+
+        <p>
+          Add products before checkout
+        </p>
 
         <button
           onClick={() =>
             navigate("/")
           }
         >
+
+          <FiArrowLeft />
+
           Continue Shopping
+
         </button>
 
       </div>
     );
   }
+
 
 
 
@@ -120,8 +152,9 @@ function CheckoutPage() {
 
 
       <h1>
-        Secure Checkout
+        Secure Checkout 🔒
       </h1>
+
 
 
 
@@ -129,16 +162,23 @@ function CheckoutPage() {
 
 
         {/* LEFT */}
+
         <div className="checkout-left">
 
+
           <h3>
+
+            <FiMapPin />
+
             Delivery Address
+
           </h3>
+
 
           <textarea
 
             placeholder=
-              "Enter full address..."
+              "Enter full delivery address..."
 
             value=
               {address}
@@ -152,12 +192,20 @@ function CheckoutPage() {
           />
 
 
+
+
           <h3>
+
+            <FiCreditCard />
+
             Payment Method
+
           </h3>
 
 
+
           <div className="payment-options">
+
 
             <label>
 
@@ -183,6 +231,7 @@ function CheckoutPage() {
             </label>
 
 
+
             <label>
 
               <input
@@ -202,46 +251,61 @@ function CheckoutPage() {
                 }
               />
 
-              UPI
+              UPI Payment
 
             </label>
 
+
           </div>
+
 
         </div>
 
 
 
+
+
         {/* RIGHT */}
+
         <div className="checkout-right">
+
 
           <h3>
             Order Summary
           </h3>
 
 
+
           {cartItems.map(
+
             (item) => (
 
               <div
 
-                key={item.id}
+                key={item?.id}
 
                 className=
                   "summary-item"
               >
 
                 <img
-                  src={item.image}
-                  alt={item.name}
+
+                  src={
+                    item?.image
+                  }
+
+                  alt={
+                    item?.name
+                  }
                 />
 
 
                 <div>
 
                   <p>
-                    {item.name}
+                    {item?.name}
                   </p>
+
 
                   <small>
 
@@ -250,7 +314,7 @@ function CheckoutPage() {
                     {" "}
 
                     {
-                      item.quantity || 1
+                      item?.quantity || 1
                     }
 
                   </small>
@@ -263,14 +327,17 @@ function CheckoutPage() {
                   ₹
 
                   {
-                    item.price
+                    item?.price
                   }
 
                 </strong>
 
               </div>
+
             )
           )}
+
+
 
 
           <div className="total-box">
@@ -284,12 +351,14 @@ function CheckoutPage() {
               ₹
 
               {
-                totalPrice
+                totalPrice.toFixed(2)
               }
 
             </h2>
 
           </div>
+
+
 
 
           <button
@@ -306,12 +375,16 @@ function CheckoutPage() {
 
           </button>
 
+
         </div>
 
+
       </div>
+
 
     </div>
   );
 }
+
 
 export default CheckoutPage;

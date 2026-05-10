@@ -1,32 +1,306 @@
-.product-details {
-  display: flex;
-  gap: 40px;
-  padding: 40px;
+/* ===========================
+   PAGE
+=========================== */
+
+.product-details{
+
+  max-width:1200px;
+
+  margin:50px auto;
+
+  padding:20px;
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:60px;
+
+  align-items:center;
 }
 
-.image-section img {
-  width: 300px;
-  border-radius: 10px;
+
+
+/* ===========================
+   IMAGE
+=========================== */
+
+.image-section{
+
+  background:white;
+
+  border-radius:30px;
+
+  padding:40px;
+
+  box-shadow:
+    0 10px 35px rgba(0,0,0,.06);
 }
 
-.info-section {
-  max-width: 500px;
+
+.image-section img{
+
+  width:100%;
+
+  border-radius:20px;
+
+  transition:.4s;
 }
 
-.add-btn {
-  background: #00ffcc;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 15px;
-  border-radius: 6px;
+
+.image-section img:hover{
+
+  transform:scale(1.06);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .product-details {
-    flex-direction: column;
-    align-items: center;
+
+
+/* ===========================
+   INFO
+=========================== */
+
+.info-section h1{
+
+  font-size:42px;
+
+  margin:20px 0;
+
+  color:#111827;
+}
+
+
+
+/* ===========================
+   CATEGORY
+=========================== */
+
+.category-badge{
+
+  display:inline-block;
+
+  padding:8px 16px;
+
+  border-radius:50px;
+
+  background:#e0f2fe;
+
+  color:#0369a1;
+
+  font-size:14px;
+
+  font-weight:700;
+}
+
+
+
+/* ===========================
+   RATING
+=========================== */
+
+.rating-box{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:10px 18px;
+
+  margin-bottom:20px;
+
+  border-radius:50px;
+
+  background:#fef3c7;
+
+  color:#b45309;
+
+  font-weight:700;
+}
+
+
+
+/* ===========================
+   PRICE
+=========================== */
+
+.price{
+
+  font-size:42px;
+
+  color:#00a884;
+
+  margin-bottom:20px;
+}
+
+
+
+/* ===========================
+   STOCK
+=========================== */
+
+.stock-box{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:10px 18px;
+
+  margin-bottom:25px;
+
+  border-radius:50px;
+
+  background:#dcfce7;
+
+  color:#15803d;
+
+  font-weight:700;
+}
+
+
+
+/* ===========================
+   DESCRIPTION
+=========================== */
+
+.description{
+
+  color:#6b7280;
+
+  line-height:1.8;
+
+  font-size:16px;
+
+  margin-bottom:35px;
+}
+
+
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.action-buttons{
+
+  display:flex;
+
+  gap:15px;
+}
+
+
+.add-btn{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  border:none;
+
+  border-radius:16px;
+
+  background:#00ffcc;
+
+  color:black;
+
+  padding:16px 28px;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+
+.add-btn:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(0,255,204,.35);
+}
+
+
+
+.wishlist-btn{
+
+  width:60px;
+
+  border:none;
+
+  border-radius:16px;
+
+  background:#111827;
+
+  color:white;
+
+  cursor:pointer;
+
+  font-size:20px;
+
+  transition:.3s;
+}
+
+
+.wishlist-btn:hover{
+
+  transform:translateY(-3px);
+}
+
+
+
+/* ===========================
+   STATES
+=========================== */
+
+.loading-page,
+.error-page{
+
+  text-align:center;
+
+  padding:100px 20px;
+}
+
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+  .product-details{
+
+    grid-template-columns:
+      1fr;
+
+    gap:30px;
   }
+
+
+  .info-section h1{
+
+    font-size:30px;
+  }
+
+
+  .price{
+
+    font-size:32px;
+  }
+
+
+  .action-buttons{
+
+    flex-direction:column;
+  }
+
 }
