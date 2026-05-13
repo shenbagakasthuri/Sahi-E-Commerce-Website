@@ -32,7 +32,7 @@ SELECT * FROM products;
 SELECT * FROM orders;
 ```
 
-### MySQL Proof
+### MySQL Images
 <img width="1909" height="1000" alt="image" src="https://github.com/user-attachments/assets/66f649c8-a621-420c-8482-5c47fd06af59" />
 
 
@@ -73,9 +73,21 @@ Example:
 }
 ```
 
-### UI Proof
+### UI Images
 
-(Add UI screenshots below)
+<img width="523" height="868" alt="image" src="https://github.com/user-attachments/assets/3675a968-1ccf-457f-a03e-8e046c8e57ab" />
+
+<img width="1919" height="880" alt="image" src="https://github.com/user-attachments/assets/aa1acdca-0c8f-4d12-a4b1-790ae06682ea" />
+
+
+<img width="1919" height="856" alt="image" src="https://github.com/user-attachments/assets/669c578d-6e3d-4c0e-83e3-dd1c0ebb4c4b" />
+
+<img width="1896" height="874" alt="image" src="https://github.com/user-attachments/assets/2e1bb846-fe48-442e-bd19-25d1eefc75c5" />
+
+<img width="1916" height="863" alt="image" src="https://github.com/user-attachments/assets/e08219ac-d751-4345-8890-be221b934fb0" />
+
+<img width="1916" height="863" alt="image" src="https://github.com/user-attachments/assets/498a8e48-3f19-4cbc-9773-d3fdfcc8a3e0" />
+
 
 ---
 
@@ -90,7 +102,12 @@ Spring Boot REST APIs:
 
 ### API Proof
 
-(Add Swagger/Postman screenshot below)
+<img width="1568" height="813" alt="image" src="https://github.com/user-attachments/assets/5f6ba7b2-c939-4b06-b7da-be2c440f462c" />
+
+<img width="1390" height="877" alt="image" src="https://github.com/user-attachments/assets/dd7637d9-a3d9-4ca8-bd39-e1519e70815f" />
+
+
+<img width="1352" height="584" alt="image" src="https://github.com/user-attachments/assets/7a6553f7-73c5-40c2-be7f-9dfa9597b494" />
 
 ---
 
