@@ -33,6 +33,8 @@ SELECT * FROM orders;
 ```
 
 ### MySQL Proof
+<img width="1909" height="1000" alt="image" src="https://github.com/user-attachments/assets/66f649c8-a621-420c-8482-5c47fd06af59" />
+
 
 (Add MySQL screenshot below)
 
