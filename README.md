@@ -97,7 +97,25 @@ Example:
 
 <img width="1916" height="863" alt="image" src="https://github.com/user-attachments/assets/498a8e48-3f19-4cbc-9773-d3fdfcc8a3e0" />
 
+---
+## JavaScript Implementation
 
+JavaScript was used for:
+
+- API Integration
+- Form Validation
+- State Management
+- Cart and Wishlist Logic
+- User Authentication
+- Dynamic Rendering
+
+Example:
+
+```javascript
+const addToCart = async (productId) => {
+   await api.post("/api/cart", { productId });
+};
+```
 ---
 
 ## API Integration
