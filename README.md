@@ -36,7 +36,22 @@ SELECT * FROM orders;
 <img width="1909" height="1000" alt="image" src="https://github.com/user-attachments/assets/66f649c8-a621-420c-8482-5c47fd06af59" />
 
 
-(Add MySQL screenshot below)
+<img width="1271" height="553" alt="image" src="https://github.com/user-attachments/assets/8f804361-e957-4be7-b768-6f27505af082" />
+
+<img width="1336" height="725" alt="image" src="https://github.com/user-attachments/assets/cdf3f728-9a92-4917-bf9e-c31b058c9138" />
+
+<img width="1317" height="606" alt="image" src="https://github.com/user-attachments/assets/77e4eb22-bf20-45f0-834b-fe9fc7a46c2d" />
+
+<img width="1250" height="879" alt="image" src="https://github.com/user-attachments/assets/05986bb9-ee7d-4de9-814c-1841b97f910b" />
+
+
+<img width="1250" height="879" alt="image" src="https://github.com/user-attachments/assets/0152e0a0-9385-4371-a7c9-15adf88f1935" />
+
+
+
+
+
+
 
 ---
 
