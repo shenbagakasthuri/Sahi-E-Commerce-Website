@@ -1,4 +1,3 @@
-# 🛒 Sahi E-commerce Platform
 
 # 🛒 Sahi E-Commerce Platform
 
