@@ -1,6 +1,16 @@
 # 🛒 Sahi E-commerce Platform
 
-Full-stack e-commerce application developed using React.js, Spring Boot, and MySQL.
+# 🛒 Sahi E-Commerce Platform
+
+A full-stack e-commerce web application developed using React.js, Spring Boot, and MySQL.
+
+This project demonstrates hands-on experience in:
+
+✅ SQL Database Design  
+✅ CSS-based Responsive UI Development  
+✅ REST API Development  
+✅ JWT Authentication  
+✅ Cart, Wishlist, and Order Management  
 
 ## Tech Stack
 
